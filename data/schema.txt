@@ -1,0 +1,29 @@
+Table Name: applications
+
+TARGET
+0 = No Default
+1 = Default
+
+AMT_INCOME_TOTAL
+Customer annual income
+
+AMT_CREDIT
+Loan amount
+
+AMT_ANNUITY
+Loan annuity amount
+
+CNT_CHILDREN
+Number of children
+
+CODE_GENDER
+Customer gender
+
+DAYS_BIRTH
+Age in days
+
+NAME_INCOME_TYPE
+Income category
+
+NAME_EDUCATION_TYPE
+Education level

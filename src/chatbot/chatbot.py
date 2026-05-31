@@ -1,23 +1,19 @@
 from nl_to_sql import generate_sql
-from sql_validator import validate_sql
-from sql_runner import run_query
+from sql_runner import run_sql
+from response_generator import generate_response
 
-question = input(
-    "Ask your question: "
-)
+def ask(question):
 
-sql = generate_sql(question)
+    sql = generate_sql(question)
 
-print("\nGenerated SQL:")
-print(sql)
+    result = run_sql(sql)
 
-if validate_sql(sql):
+    answer = generate_response(
+        question,
+        result.to_string(index=False)
+    )
 
-    result = run_query(sql)
+    print("\nGenerated SQL:")
+    print(sql)
 
-    print("\nResult:")
-    print(result)
-
-else:
-
-    print("Unsafe SQL blocked.")
+    return answer
