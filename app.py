@@ -173,13 +173,14 @@ st.sidebar.info(
 )
 
 page = st.sidebar.radio(
-"",
-[
-"🏠 Home",
-"📈 Risk Prediction",
-"🔍 Explainability",
-"💬 Talk To Data"
-]
+    "Navigation",
+    [
+        "Home",
+        "Risk Prediction",
+        "Explainability",
+        "Talk To Data"
+    ],
+    label_visibility="collapsed"
 )
 
 # =====================================
