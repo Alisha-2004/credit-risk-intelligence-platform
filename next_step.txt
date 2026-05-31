@@ -1,0 +1,14 @@
+Completed:
+- EDA
+- Feature Engineering
+- SMOTE
+- LightGBM
+- Model Comparison
+- SHAP
+
+Next:
+- Finish Groq setup
+- Build NL to SQL chatbot
+- Build Streamlit UI
+- Create PPT
+- Push GitHub repo
