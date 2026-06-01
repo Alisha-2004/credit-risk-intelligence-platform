@@ -4,23 +4,32 @@
 
 ## Overview
 
-The Credit Risk Intelligence Platform is an AI-powered decision support system designed to assist financial institutions in evaluating customer creditworthiness, predicting loan default risk, and analyzing credit data through natural language queries.
+The Credit Risk Intelligence Platform is an AI-powered decision support system developed to assess customer creditworthiness, predict loan default risk, and generate business insights from credit data.
 
-The platform combines Machine Learning, Explainable AI (XAI), and Large Language Models (LLMs) to deliver transparent and intelligent credit risk assessment.
+The platform integrates Machine Learning (LightGBM), Explainable AI (SHAP), and Natural Language Analytics (Groq Llama 3.3) within an interactive Streamlit dashboard to support transparent and data-driven credit risk assessment.
 
----
+
+## Key Features
+Credit Risk Prediction using LightGBM
+Explainable AI using SHAP
+Risk Scoring & Recommendation Engine
+Natural Language to SQL Analytics Chatbot
+Interactive Streamlit Dashboard
+Dockerized Deployment
+
+
 ## Live Demo
 
 Streamlit Application: https://credit-risk-intelligence-platform.streamlit.app/
 
 GitHub Repository: https://github.com/Alisha-2004/credit-risk-intelligence-platform
----
-### Deployment Note
 
-The complete application, including the Natural Language Analytics Chatbot, is fully functional in the local environment using the complete SQLite database.
+## Deployment Note
 
-For cloud deployment, the chatbot database is not included because the SQLite database exceeds GitHub's file size limitations. As a result, the deployed Streamlit version demonstrates the user interface and application workflow, while full chatbot functionality is available in the local deployment.
----
+The Streamlit Cloud deployment demonstrates the complete dashboard, risk prediction, explainability, and application workflow.
+
+The NL-to-SQL chatbot requires a SQLite database generated from the full dataset. Since the database file exceeds GitHub size limitations, chatbot analytics are fully available in local deployments where the database is present.
+
 
 ## Problem Statement
 
@@ -38,7 +47,7 @@ This project addresses these challenges by providing:
 * Risk scoring and recommendation engine
 * Natural Language to SQL analytics chatbot
 
----
+
 
 ## Dataset
 
@@ -65,17 +74,9 @@ The Home Credit Default Risk dataset was released by Home Credit Group to suppor
 
 
 
----
-
 ## System Architecture
 
-Dataset
-→ Data Preprocessing
-→ Feature Engineering
-→ SMOTE Balancing
-→ LightGBM Model
-→ Risk Scoring Engine
-→ Streamlit Dashboard
+![Architecture](documents/sa.png)
 
 Chatbot Pipeline:
 
@@ -85,7 +86,7 @@ User Question
 → SQLite Database
 → Business Answer
 
----
+
 
 ## Methodology
 
@@ -112,7 +113,6 @@ Three models were evaluated:
 
 LightGBM was selected as the final model due to superior predictive performance.
 
----
 
 ## Explainable AI
 
@@ -125,7 +125,7 @@ Features:
 * Model transparency
 * Explainable credit decisions
 
----
+
 
 ## Risk Scoring Engine
 
@@ -147,7 +147,6 @@ Risk Score = Probability × 100
 * Medium Risk → Manual Review
 * High Risk → Additional Verification Required
 
----
 
 ## Natural Language Analytics Chatbot
 
@@ -167,32 +166,26 @@ Technologies Used:
 * SQLite
 * Prompt Engineering
 
----
+
 
 ## Dashboard
 
-### Home Page
 
-![Home](documents/screenshots/homepage.png)
+| Home | Risk Prediction |
+|------|------|
+| ![](documents/screenshots/homepage.png) | ![](documents/screenshots/risk%20prediction%20page.png) |
 
-### Risk Prediction
+| Explainability | Talk To Data |
+|------|------|
+| ![](documents/screenshots/explainability%20page.png) | ![](documents/screenshots/c1.png) |
 
-![Risk Prediction](documents/screenshots/risk%20prediction%20page.png)
 
-### Explainability
 
-![Explainability](documents/screenshots/explainability%20page.png)
-
-### Talk To Data
-
-![Chatbot](documents/screenshots/c1.png)
-
----
 
 ## Project Structure
 
+```text
 credit-risk-intelligence-platform/
-│
 ├── app.py
 ├── data/
 │   └── schema.txt
@@ -206,8 +199,7 @@ credit-risk-intelligence-platform/
 ├── docker-compose.yml
 ├── requirements.txt
 └── README.md
-
----
+```
 
 ## Technology Stack
 
@@ -233,7 +225,7 @@ credit-risk-intelligence-platform/
 
 * Python
 
----
+
 
 ## Installation
 
@@ -247,7 +239,6 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
----
 
 ## Docker Deployment
 
@@ -265,7 +256,6 @@ http://localhost:8501
 
 The project is fully containerized using Docker and Docker Compose for reproducible deployment.
 
----
 
 ## Future Scope
 
@@ -274,7 +264,7 @@ The project is fully containerized using Docker and Docker Compose for reproduci
 * Multi-model ensemble learning
 * Regulatory compliance integration
 * Banking API integration
----
+
 
 ## Author
 
