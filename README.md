@@ -9,6 +9,18 @@ The Credit Risk Intelligence Platform is an AI-powered decision support system d
 The platform combines Machine Learning, Explainable AI (XAI), and Large Language Models (LLMs) to deliver transparent and intelligent credit risk assessment.
 
 ---
+## Live Demo
+
+Streamlit Application: https://credit-risk-intelligence-platform.streamlit.app/
+
+GitHub Repository: https://github.com/Alisha-2004/credit-risk-intelligence-platform
+---
+### Deployment Note
+
+The complete application, including the Natural Language Analytics Chatbot, is fully functional in the local environment using the complete SQLite database.
+
+For cloud deployment, the chatbot database is not included because the SQLite database exceeds GitHub's file size limitations. As a result, the deployed Streamlit version demonstrates the user interface and application workflow, while full chatbot functionality is available in the local deployment.
+---
 
 ## Problem Statement
 
@@ -32,7 +44,11 @@ This project addresses these challenges by providing:
 
 **Dataset:** Home Credit Default Risk Dataset
 
-### Dataset Statistics
+**Source:** Kaggle – https://www.kaggle.com/competitions/home-credit-default-risk
+
+The dataset was released by Home Credit Group and contains historical loan application information used to predict the probability of customer default.
+
+Dataset Statistics:
 
 * Records: 307,511
 * Features: 122 Original Features
@@ -42,6 +58,7 @@ Target Definition:
 
 * 0 → No Default
 * 1 → Default
+
 
 ---
 
@@ -94,7 +111,7 @@ LightGBM was selected as the final model due to superior predictive performance.
 
 ## Explainable AI
 
-SHAP (SHapley Additive exPlanations) was used to interpret model predictions.
+SHAP (SHapley Additive Explanations) was used to interpret LightGBM model predictions and provide transparency in credit risk assessment.
 
 Features:
 
@@ -167,6 +184,26 @@ Technologies Used:
 
 ---
 
+## Project Structure
+
+credit-risk-intelligence-platform/
+│
+├── app.py
+├── data/
+│   └── schema.txt
+├── documents/
+├── models/
+├── notebooks/
+├── src/
+│   ├── chatbot/
+│   └── ml/
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+└── README.md
+
+---
+
 ## Technology Stack
 
 ### Frontend
@@ -196,7 +233,7 @@ Technologies Used:
 ## Installation
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/Alisha-2004/credit-risk-intelligence-platform.git
 
 cd credit-risk-intelligence-platform
 
@@ -207,14 +244,31 @@ streamlit run app.py
 
 ---
 
+## Docker Deployment
+
+Run the application using Docker:
+
+```bash
+docker compose up --build
+```
+
+Access the application at:
+
+```text
+http://localhost:8501
+```
+
+The project is fully containerized using Docker and Docker Compose for reproducible deployment.
+
+---
+
 ## Future Scope
 
 * Real-time loan processing
-* Cloud deployment
 * Advanced recommendation systems
 * Multi-model ensemble learning
-* Regulatory compliance support
-
+* Regulatory compliance integration
+* Banking API integration
 ---
 
 ## Author
