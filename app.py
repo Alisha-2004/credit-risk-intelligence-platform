@@ -190,7 +190,7 @@ page = st.sidebar.radio(
 st.success(
     "Welcome to the Credit Risk Intelligence Platform. Explore risk prediction, explainability, and AI-powered analytics."
 )
-if page == "Home":
+if page == "🏠 Home":
 
 
     st.markdown(
@@ -281,7 +281,7 @@ if page == "Home":
 
 # =====================================
 
-elif page == "Risk Prediction":
+elif page == "📈 Risk Prediction":
 
 
     st.markdown(
@@ -344,7 +344,7 @@ elif page == "Risk Prediction":
 
 # =====================================
 
-elif page == "Explainability":
+elif page == "🔍 Explainability":
 
 
     st.markdown(
@@ -370,7 +370,7 @@ elif page == "Explainability":
 
 # =====================================
 
-elif page == "Talk To Data":
+elif page == "💬 Talk To Data":
 
 
     st.markdown(
