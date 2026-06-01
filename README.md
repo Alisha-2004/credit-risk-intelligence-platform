@@ -44,20 +44,25 @@ This project addresses these challenges by providing:
 
 **Dataset:** Home Credit Default Risk Dataset
 
-**Source:** Kaggle – https://www.kaggle.com/competitions/home-credit-default-risk
+**Selected File:** `application_train.csv`
 
-The dataset was released by Home Credit Group and contains historical loan application information used to predict the probability of customer default.
+**Source:** Kaggle – Home Credit Default Risk Competition
 
-Dataset Statistics:
+https://www.kaggle.com/competitions/home-credit-default-risk
 
-* Records: 307,511
-* Features: 122 Original Features
-* Target Variable: TARGET
+The Home Credit Default Risk dataset was released by Home Credit Group to support research on credit risk assessment and loan default prediction. For this project, the **application_train.csv** file was selected as the primary dataset because it contains both the target variable (`TARGET`) and comprehensive applicant-level information required for credit risk modeling, explainability, and business analytics.
 
-Target Definition:
+### Dataset Statistics
 
-* 0 → No Default
-* 1 → Default
+- Records: 307,511
+- Features: 122 Original Features
+- Target Variable: `TARGET`
+
+### Target Definition
+
+- `0` → No Default
+- `1` → Default
+
 
 
 ---
